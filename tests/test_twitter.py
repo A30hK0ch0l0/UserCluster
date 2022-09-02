@@ -1,0 +1,118 @@
+import pandas as pd
+from lf_user_cluster.twitter.twitter_v1 import Twitter as TwitterV1
+from lf_user_cluster.twitter.twitter_v2 import Twitter as TwitterV2
+
+
+def test_twitter_v1():
+    data = [
+        {
+            "item": "svpol",
+            "freq": 11
+        },
+        {
+            "item": "Löfvenskaparordning",
+            "freq": 1
+        }
+
+    ]
+    assert TwitterV1().set_user_cluster(data) == ["خارجی"]
+
+
+def test_twitter_v2():
+    data = pd.DataFrame([
+        {"item": "cybersecurity", "item_type": "hashtags", "freq": 4},
+        {"item": "goodread", "item_type": "hashtags", "freq": 4},
+        {"item": "career", "item_type": "hashtags", "freq": 3},
+        {"item": "datascience", "item_type": "hashtags", "freq": 3},
+        {"item": "ai", "item_type": "hashtags", "freq": 2},
+        {"item": "artificialintelligence", "item_type": "hashtags", "freq": 2},
+        {"item": "careerhacks", "item_type": "hashtags", "freq": 2},
+        {"item": "deeplearning", "item_type": "hashtags", "freq": 2},
+        {"item": "lambda", "item_type": "hashtags", "freq": 2},
+        {"item": "msexcel", "item_type": "hashtags", "freq": 2},
+        {"item": "spacex", "item_type": "hashtags", "freq": 2},
+        {"item": "addict", "item_type": "hashtags", "freq": 1},
+        {"item": "analytics", "item_type": "hashtags", "freq": 1},
+        {"item": "badminton", "item_type": "hashtags", "freq": 1},
+        {"item": "bash", "item_type": "hashtags", "freq": 1},
+        {"item": "bboviz", "item_type": "hashtags", "freq": 1},
+        {"item": "bethankful", "item_type": "hashtags", "freq": 1},
+        {"item": "binaural", "item_type": "hashtags", "freq": 1},
+        {"item": "burjalarab", "item_type": "hashtags", "freq": 1},
+        {"item": "burjkhalifa", "item_type": "hashtags", "freq": 1},
+        {"item": "chill", "item_type": "hashtags", "freq": 1},
+        {"item": "cocolevy", "item_type": "hashtags", "freq": 1},
+        {"item": "coconutfarmers", "item_type": "hashtags", "freq": 1},
+        {"item": "dataconnectors", "item_type": "hashtags", "freq": 1},
+        {"item": "dataengineer", "item_type": "hashtags", "freq": 1},
+        {"item": "dataprofessional", "item_type": "hashtags", "freq": 1},
+        {"item": "defense", "item_type": "hashtags", "freq": 1},
+        {"item": "dubai", "item_type": "hashtags", "freq": 1},
+        {"item": "encryption", "item_type": "hashtags", "freq": 1},
+        {"item": "falcon9", "item_type": "hashtags", "freq": 1},
+        {"item": "fanatics", "item_type": "hashtags", "freq": 1},
+        {"item": "finedining", "item_type": "hashtags", "freq": 1},
+        {"item": "flawed", "item_type": "hashtags", "freq": 1},
+        {"item": "freemium", "item_type": "hashtags", "freq": 1},
+        {"item": "halalan2016", "item_type": "hashtags", "freq": 1},
+        {"item": "harbinger", "item_type": "hashtags", "freq": 1},
+        {"item": "hashicorp", "item_type": "hashtags", "freq": 1},
+        {"item": "inc", "item_type": "hashtags", "freq": 1},
+        {"item": "inpo", "item_type": "hashtags", "freq": 1},
+        {"item": "interesting", "item_type": "hashtags", "freq": 1},
+        {"item": "jobtimize", "item_type": "hashtags", "freq": 1},
+        {"item": "kaizen", "item_type": "hashtags", "freq": 1},
+        {"item": "kubernetes", "item_type": "hashtags", "freq": 1},
+        {"item": "leanthinking", "item_type": "hashtags", "freq": 1},
+        {"item": "legendsoftomorrow", "item_type": "hashtags", "freq": 1},
+        {"item": "machineintelligence", "item_type": "hashtags", "freq": 1},
+        {"item": "machinelearning", "item_type": "hashtags", "freq": 1},
+        {"item": "manofsteel", "item_type": "hashtags", "freq": 1},
+        {"item": "negrosislandregion", "item_type": "hashtags", "freq": 1},
+        {"item": "neuralnetworks", "item_type": "hashtags", "freq": 1},
+        {"item": "newyear2016", "item_type": "hashtags", "freq": 1},
+        {"item": "nuclearindustry", "item_type": "hashtags", "freq": 1},
+        {"item": "pcmag", "item_type": "hashtags", "freq": 1},
+        {"item": "pencil", "item_type": "hashtags", "freq": 1},
+        {"item": "philippinesgrow", "item_type": "hashtags", "freq": 1},
+        {"item": "qotd", "item_type": "hashtags", "freq": 1},
+        {"item": "qoute", "item_type": "hashtags", "freq": 1},
+        {"item": "romano", "item_type": "hashtags", "freq": 1},
+        {"item": "security", "item_type": "hashtags", "freq": 1},
+        {"item": "shemitah", "item_type": "hashtags", "freq": 1},
+        {"item": "shmita", "item_type": "hashtags", "freq": 1},
+        {"item": "shotoniphone5s", "item_type": "hashtags", "freq": 1},
+        {"item": "siliconhills", "item_type": "hashtags", "freq": 1},
+        {"item": "stopbinay", "item_type": "hashtags", "freq": 1},
+        {"item": "surfshark", "item_type": "hashtags", "freq": 1},
+        {"item": "tbt", "item_type": "hashtags", "freq": 1},
+        {"item": "terraform", "item_type": "hashtags", "freq": 1},
+        {"item": "themartianme", "item_type": "hashtags", "freq": 1},
+        {"item": "thephilippines", "item_type": "hashtags", "freq": 1},
+        {"item": "thinkphilippines", "item_type": "hashtags", "freq": 1},
+        {"item": "turing", "item_type": "hashtags", "freq": 1},
+        {"item": "uae", "item_type": "hashtags", "freq": 1},
+        {"item": "uaeastronomy", "item_type": "hashtags", "freq": 1},
+        {"item": "webdevelopment", "item_type": "hashtags", "freq": 1},
+        {"item": "wfh", "item_type": "hashtags", "freq": 1},
+        {"item": "wow", "item_type": "hashtags", "freq": 1},
+        {"item": "zoom", "item_type": "hashtags", "freq": 1},
+        {"item": "zsh", "item_type": "hashtags", "freq": 1},
+        {"item": "34743251", "item_type": "origin_users", "freq": 2},
+        {"item": "1349149096909668363", "item_type": "origin_users", "freq": 1},
+        {"item": "15110431", "item_type": "origin_users", "freq": 1},
+        {"item": "164425558", "item_type": "origin_users", "freq": 1},
+        {"item": "16950628", "item_type": "origin_users", "freq": 1},
+        {"item": "183749519", "item_type": "origin_users", "freq": 1},
+        {"item": "18789893", "item_type": "origin_users", "freq": 1},
+        {"item": "203226820", "item_type": "origin_users", "freq": 1},
+        {"item": "20562637", "item_type": "origin_users", "freq": 1},
+        {"item": "240824628", "item_type": "origin_users", "freq": 1},
+        {"item": "2809959174", "item_type": "origin_users", "freq": 1},
+        {"item": "340342573", "item_type": "origin_users", "freq": 1},
+        {"item": "3819701", "item_type": "origin_users", "freq": 1},
+        {"item": "90286855", "item_type": "origin_users", "freq": 1},
+        {"item": "solarwinds", "item_type": "retweeted_hashtags", "freq": 1},
+        {"item": "covid19", "item_type": "retweeted_hashtags", "freq": 1}
+    ])
+    assert TwitterV2().calculate_cluster(data) == [16]
